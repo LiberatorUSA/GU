@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="SettingsForm" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/FrameWindow" Name="SettingsWindow" >
+            <Property Name="Font" Value="Commonwealth-10" />
+            <Property Name="Text" Value="Settings" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="TitlebarFont" Value="Commonwealth-10" />
+            <Property Name="SizingEnabled" Value="False" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Window Type="TaharezLook/TabControl" Name="SettingsTabControl" >
+                <Property Name="TabHeight" Value="{0,26.1008}" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="TabPanePosition" Value="Top" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.15,0},{0.995,0},{0.995,0}}" />
+                <Window Type="DefaultWindow" Name="VideoSettingsTabContentPane" >
+                    <Property Name="Text" Value="Video" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                </Window>
+                <Window Type="DefaultWindow" Name="AudioSettingsTabContentPane" >
+                    <Property Name="Text" Value="Audio" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                </Window>
+                <Window Type="DefaultWindow" Name="InputSettingsTabContentPane" >
+                    <Property Name="Text" Value="Input" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                </Window>
+            </Window>
+            <Window Type="TaharezLook/Combobox" Name="SettingsContextCombobox" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.291249,0},{0.066667,0},{0.541249,0},{0.236667,0}}" />
+                <Property Name="MaxEditTextLength" Value="1073741823" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="MenuButton" >
+                <Property Name="Text" Value="Menu" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01625,0},{0.063333,0},{0.1825,0},{0.116667,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

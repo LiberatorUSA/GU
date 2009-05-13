@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Root" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/FrameWindow" Name="FileSystemDialogWindow" >
+            <Property Name="Text" Value="FileSystemDialog" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="TitlebarFont" Value="Commonwealth-10" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.000781,0},{0.003464,0},{0.478529,0},{0.390698,0}}" />
+            <Window Type="TaharezLook/Editbox" Name="SelectionEditbox" >
+                <Property Name="MaxTextLength" Value="1073741823" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.055722,0},{0.709065,0},{0.73474,0},{0.813078,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Combobox" Name="FilterCombobox" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.053125,0},{0.832272,0},{0.736851,0},{0.937126,0}}" />
+                <Property Name="MaxEditTextLength" Value="1073741823" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="OkButton" >
+                <Property Name="Text" Value="Ok" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.741559,0},{0.694618,0},{0.962988,0},{0.826233,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="CancelButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Cancel" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.748052,0},{0.834079,0},{0.969481,0},{0.972869,0}}" />
+            </Window>
+            <Window Type="TaharezLook/MultiColumnList" Name="FileSystemGridView" >
+                <Property Name="Font" Value="DejaVuSans-10" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0601658,0},{0.160646,0},{0.944648,0},{0.647366,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

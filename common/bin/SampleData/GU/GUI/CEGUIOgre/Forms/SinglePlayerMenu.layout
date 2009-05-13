@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Root" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/FrameWindow" Name="SinglePlayerWindow" >
+            <Property Name="Text" Value="Single player games" />
+            <Property Name="TitlebarFont" Value="Commonwealth-10" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.1725,0},{0.0383334,0},{0.845,0},{0.929999,0}}" />
+            <Window Type="TaharezLook/Listbox" Name="GamesList" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0130113,0},{0.0588783,0},{0.989777,0},{0.865888,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="MenuButton" >
+                <Property Name="Text" Value="Menu" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0308551,0},{0.908412,0},{0.169331,0},{0.964019,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="Play" >
+                <Property Name="Text" Value="Play" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.788847,0},{0.914954,0},{0.951487,0},{0.97243,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

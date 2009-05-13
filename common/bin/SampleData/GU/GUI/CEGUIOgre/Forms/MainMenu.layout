@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="MainMenu" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/StaticImage" Name="MainMenuBackground" >
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1.0022,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Window Type="TaharezLook/Button" Name="MultiplayerButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Multiplayer" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00514001,0},{0.615789,0},{0.188386,0},{0.682244,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="SingleplayerButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Singleplayer" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00514001,0},{0.552415,0},{0.189168,0},{0.61887,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="SettingsButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Settings" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00514001,0},{0.680892,0},{0.187323,0},{0.745238,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="ExitButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Exit" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00514001,0},{0.813896,0},{0.187423,0},{0.876132,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="DownloadsButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Downloads" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00514001,0},{0.743148,0},{0.187423,0},{0.805385,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

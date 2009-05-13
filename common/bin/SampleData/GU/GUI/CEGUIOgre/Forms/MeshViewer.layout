@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Root" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/FrameWindow" Name="MeshViewerWindow" >
+            <Property Name="Text" Value="Mesh Viewer" />
+            <Property Name="TitlebarFont" Value="Commonwealth-10" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.000856909,0},{0.00323783,0},{0.99007,0},{0.995581,0}}" />
+            <Window Type="TaharezLook/Button" Name="OpenMeshFileButton" >
+                <Property Name="Text" Value="Open" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.902449,0},{0.075071,0},{0.971705,0},{0.122285,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="CloseButton" >
+                <Property Name="Text" Value="Close" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.87956,0},{0.854435,0},{0.94206,0},{0.897193,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Spinner" Name="PitchSpinner" >
+                <Property Name="StepSize" Value="1" />
+                <Property Name="CurrentValue" Value="0" />
+                <Property Name="MaximumValue" Value="360" />
+                <Property Name="MinimumValue" Value="-32768" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0302579,0},{0.903057,0},{0.116406,0},{0.948043,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Spinner" Name="YawSpinner" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="StepSize" Value="1" />
+                <Property Name="CurrentValue" Value="0" />
+                <Property Name="MaximumValue" Value="360" />
+                <Property Name="MinimumValue" Value="-32768" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.137014,0},{0.902778,0},{0.223162,0},{0.947764,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Spinner" Name="RollSpinner" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="StepSize" Value="1" />
+                <Property Name="CurrentValue" Value="0" />
+                <Property Name="MaximumValue" Value="360" />
+                <Property Name="MinimumValue" Value="-32768" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.242757,0},{0.901524,0},{0.328905,0},{0.94651,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="PitchLabel" >
+                <Property Name="Text" Value="Pitch:" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0332981,0},{0.85654,0},{0.102555,0},{0.903754,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="YawLabel" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Yaw:" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.135663,0},{0.857514,0},{0.204919,0},{0.904729,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="RollLabel" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Roll:" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.243095,0},{0.854032,0},{0.312352,0},{0.901247,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="ScaleLabel" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Scale:" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.347149,0},{0.855007,0},{0.416406,0},{0.902222,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Spinner" Name="ScaleSpinner" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="StepSize" Value="1" />
+                <Property Name="CurrentValue" Value="0" />
+                <Property Name="MaximumValue" Value="99999" />
+                <Property Name="MinimumValue" Value="-32768" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.347487,0},{0.903669,0},{0.433635,0},{0.948655,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="ShowMeshButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Show" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.643327,0},{0.0725211,0},{0.712583,0},{0.119735,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticImage" Name="RenderContext" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.023649,0},{0.074373,0},{0.627001,0},{0.793526,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Listbox" Name="MeshListbox" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.636919,0},{0.131254,0},{0.976447,0},{0.276519,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Editbox" Name="MaterialDirEditbox" >
+                <Property Name="ReadOnly" Value="True" />
+                <Property Name="MaxTextLength" Value="1073741823" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.642271,0},{0.464525,0},{0.879736,0},{0.517261,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Listbox" Name="MaterialListbox" >
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.64118,0},{0.350386,0},{0.974895,0},{0.459726,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="MeshesLabel" >
+                <Property Name="Text" Value="Meshes:" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.753817,0},{0.0833504,0},{0.84729,0},{0.127956,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="MaterialsLabel" >
+                <Property Name="Text" Value="Materials:" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.754357,0},{0.305303,0},{0.851091,0},{0.349909,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="OpenMaterialDirButton" >
+                <Property Name="Text" Value="Open" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.889697,0},{0.46958,0},{0.971758,0},{0.514185,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Checkbox" Name="MaterialDirAsMeshDirCheckbox" >
+                <Property Name="Text" Value="Material dir same as mesh dir" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.645664,0},{0.516092,0},{0.939687,0},{0.554279,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="ControlCameraButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Control Camera" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.456906,0},{0.796472,0},{0.627252,0},{0.837267,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

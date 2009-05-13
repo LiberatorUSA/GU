@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="VideoSettingsForm" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/Button" Name="ApplyButton" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Apply" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.064156,0},{0.383429,0},{0.214999,0},{0.441332,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Combobox" Name="ResolutionCombobox" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="N/A" />
+            <Property Name="ReadOnly" Value="True" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.059375,0},{0.115514,0},{0.371875,0},{0.365515,0}}" />
+            <Property Name="MaxEditTextLength" Value="1073741823" />
+        </Window>
+        <Window Type="TaharezLook/Combobox" Name="AntiAliasingCombobox" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="N/A" />
+            <Property Name="ReadOnly" Value="True" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.059375,0},{0.238731,0},{0.371875,0},{0.488731,0}}" />
+            <Property Name="MaxEditTextLength" Value="1073741823" />
+        </Window>
+        <Window Type="TaharezLook/Checkbox" Name="FullscreenCheckbox" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Fullscreen" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0614063,0},{0.336862,0},{0.281406,0},{0.362932,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Checkbox" Name="VSyncCheckbox" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Wait for Vert. Sync" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.060625,0},{0.29965,0},{0.320469,0},{0.327916,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="ResolutionLabel" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Resolution:" />
+            <Property Name="HorzFormatting" Value="WordWrapCentred" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.05875,0},{0.055,0},{0.22375,0},{0.0983334,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="AntiAliasingLabel" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Anti Aliasing:" />
+            <Property Name="HorzFormatting" Value="WordWrapCentred" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="UnifiedAreaRect" Value="{{0.06,0},{0.166667,0},{0.24375,0},{0.218333,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<PatchConfigTemplate>
+	<CPatchEngine LocalRootDir="" TempStorageRoot="" PatchListURL="" PatchListCodec="xml"/>
+</PatchConfigTemplate>

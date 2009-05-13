@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Root" >
+        <Property Name="InheritsAlpha" Value="False" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/FrameWindow" Name="DownloadsWindow" >
+            <Property Name="Font" Value="Commonwealth-10" />
+            <Property Name="Text" Value="Downloads" />
+            <Property Name="TitlebarFont" Value="Commonwealth-10" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0075,0},{0.00791667,0},{0.615,0},{0.594584,0}}" />
+            <Window Type="TaharezLook/TabControl" Name="DownloadsTabControl" >
+                <Property Name="TabHeight" Value="{0,26.1008}" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="TabPanePosition" Value="Top" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.2,0},{1,0},{1,0}}" />
+                <Window Type="DefaultWindow" Name="AllAvailableTab" >
+                    <Property Name="Text" Value="All Available" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                    <Window Type="TaharezLook/MultiColumnList" Name="DowloadsList" >
+                        <Property Name="Font" Value="Commonwealth-10" />
+                        <Property Name="Tooltip" Value="Available downloads" />
+                        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                        <Property Name="UnifiedAreaRect" Value="{{0.00584324,0},{0.0135511,0},{0.985843,0},{0.993551,0}}" />
+                    </Window>
+                </Window>
+                <Window Type="DefaultWindow" Name="TransfersTab" >
+                    <Property Name="Text" Value="Transfers" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                </Window>
+                <Window Type="DefaultWindow" Name="Downloaded" >
+                    <Property Name="Text" Value="Downloaded" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                </Window>
+            </Window>
+            <Window Type="TaharezLook/Button" Name="MenuButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Menu" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.023045,0},{0.109091,0},{0.211317,0},{0.174432,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="SettingsButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Settings" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.229658,0},{0.109091,0},{0.417881,0},{0.174432,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="RefreshButton" >
+                <Property Name="Font" Value="Commonwealth-10" />
+                <Property Name="Text" Value="Refresh" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.436551,0},{0.109375,0},{0.624774,0},{0.174716,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>
