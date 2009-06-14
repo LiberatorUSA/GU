@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="guCORE_MVC9"
+	Name="guCORE"
 	ProjectGUID="{09E82E41-FC8B-4227-A536-2D652C80055B}"
 	RootNamespace="guCORE_MVC8"
 	Keyword="Win32Proj"
@@ -72,7 +72,7 @@
 				SubSystem="2"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary="$(OutDir)/guCORE_MVC8_d.lib"
+				ImportLibrary="$(OutDir)/guCORE_MVC9_d.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -155,7 +155,7 @@
 				EnableCOMDATFolding="2"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary="$(OutDir)/guCORE_MVC8.lib"
+				ImportLibrary="$(OutDir)/guCORE_MVC9.lib"
 				TargetMachine="1"
 			/>
 			<Tool
