@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------
-# This file is part of the CMake build system for GUCE
-#     (Galaxy Unlimited Engine)
+# This file is part of the CMake build system for GU
+#     (Galaxy Unlimited)
 # For the latest info, see http://www.VanvelzenSoftware.com/
 #
 # The contents of this file are placed in the public domain. Feel
@@ -9,12 +9,12 @@
 
 include(PreprocessorUtils)
 
-macro(GUCE_get_version HEADER)
+macro(GU_get_version HEADER)
   file(READ ${HEADER} TEMP_VAR_CONTENTS)
-  get_preprocessor_entry(TEMP_VAR_CONTENTS GUCE_VERSION_MAJOR GUCE_VERSION_MAJOR)
-  get_preprocessor_entry(TEMP_VAR_CONTENTS GUCE_VERSION_MINOR GUCE_VERSION_MINOR)
-  get_preprocessor_entry(TEMP_VAR_CONTENTS GUCE_VERSION_PATCH GUCE_VERSION_PATCH)
-  get_preprocessor_entry(TEMP_VAR_CONTENTS GUCE_VERSION_NAME GUCE_VERSION_NAME)
-  get_preprocessor_entry(TEMP_VAR_CONTENTS GUCE_VERSION_SUFFIX GUCE_VERSION_SUFFIX)
-  set(GUCE_VERSION "${GUCE_VERSION_MAJOR}.${GUCE_VERSION_MINOR}.${GUCE_VERSION_PATCH}")
+  get_preprocessor_entry(TEMP_VAR_CONTENTS GU_VERSION_MAJOR GU_VERSION_MAJOR)
+  get_preprocessor_entry(TEMP_VAR_CONTENTS GU_VERSION_MINOR GU_VERSION_MINOR)
+  get_preprocessor_entry(TEMP_VAR_CONTENTS GU_VERSION_PATCH GU_VERSION_PATCH)
+  get_preprocessor_entry(TEMP_VAR_CONTENTS GU_VERSION_NAME GU_VERSION_NAME)
+  get_preprocessor_entry(TEMP_VAR_CONTENTS GU_VERSION_SUFFIX GU_VERSION_SUFFIX)
+  set(GU_VERSION "${GU_VERSION_MAJOR}.${GU_VERSION_MINOR}.${GU_VERSION_PATCH}")
 endmacro()
