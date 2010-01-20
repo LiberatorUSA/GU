@@ -7,7 +7,7 @@
 # free to make use of it in any way you like.
 #-------------------------------------------------------------------
 
-include( GUCEConfigTargets )
+include( GUConfigTargets )
 
 
 function(GUCEF_config_lib LIBNAME)
