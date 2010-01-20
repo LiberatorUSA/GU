@@ -1,13 +1,19 @@
 @echo off
 
-SET GUCE_THEBATCHDIR=%CD%
+SET GU_THEBATCHDIR=%CD%
 
 IF NOT DEFINED GUCEF_HOME (
   ECHO Error: GUCEF_HOME is not defined
   GOTO END
 )
 
+IF NOT DEFINED GUCE_HOME (
+  ECHO Error: GUCEF_HOME is not defined
+  GOTO END
+)
+
 ECHO GUCEF_HOME=%GUCEF_HOME%
+ECHO GUCE_HOME=%GUCE_HOME%
 
 IF NOT DEFINED DEBUG_CMAKELISTGENERATOR (
   GOTO FIND_GUCEF_RELEASE_CMAKELISTGENERATOR
@@ -37,7 +43,7 @@ IF NOT EXIST %EXETEST% (
   GOTO END
 )
 
-cd %GUCE_THEBATCHDIR%
+cd %GU_THEBATCHDIR%
 GOTO RUN_CMAKELISTGENERATOR
 
 
@@ -59,7 +65,7 @@ IF NOT EXIST %EXETEST% (
   GOTO FIND_GUCE_CMAKELISTGENERATOR
 )
     
-cd %GUCE_THEBATCHDIR%
+cd %GU_THEBATCHDIR%
 GOTO RUN_CMAKELISTGENERATOR
 
 
@@ -68,15 +74,7 @@ REM -----------------------------------------------------
 
 :FIND_GUCE_CMAKELISTGENERATOR
 
-cd %GUCE_THEBATCHDIR%
-cd..
-cd..
-cd tools
-cd CMakeListGenerator
-cd bin
-cd ReleasedBins
-cd 15Jan2010
-SET GENERATORPATH=%CD%
+SET GENERATORPATH=%GUCE_HOME%\tools\CMakeListGenerator\bin\ReleasedBins\18Jan2010\CMakeListGenerator\
 SET GENERATOREXE=CMakeListGenerator.exe
 SET EXETEST=%GENERATORPATH%\%GENERATOREXE%
 
@@ -85,7 +83,7 @@ IF NOT EXIST %EXETEST% (
   GOTO END
 )
 
-cd %GUCE_THEBATCHDIR%
+cd %GU_THEBATCHDIR%
 GOTO RUN_CMAKELISTGENERATOR
 
 
@@ -96,17 +94,18 @@ REM -----------------------------------------------------
 
 SET PATH=%GENERATORPATH%;%PATH%
 
-cd %GUCE_THEBATCHDIR%
+cd %GU_THEBATCHDIR%
 cd..
 cd..
 
-IF NOT DEFINED GUCE_HOME (
-  ECHO GUCE environment variable not found, setting it
-  SET GUCE_HOME=%CD%
+IF NOT DEFINED GU_HOME (
+  SET GU_HOME=%CD%
 )
 
-%GENERATOREXE% 'rootDir=%GUCEF_HOME%' 'rootDir=%GUCE_HOME%'
-cd %GUCE_THEBATCHDIR%
+ECHO GU_HOME = %GU_HOME%
+
+%GENERATOREXE% 'rootDir=%GUCEF_HOME%' 'rootDir=%GUCE_HOME%' 'rootDir=%GU_HOME%'
+cd %GU_THEBATCHDIR%
 
 REM -----------------------------------------------------
 
