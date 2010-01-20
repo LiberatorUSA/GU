@@ -7,17 +7,17 @@
 # free to make use of it in any way you like.
 #-------------------------------------------------------------------
 
-include( GUCEConfigTargets )
+include( GUConfigTargets )
 
 
-function(GUCEF_config_lib LIBNAME)
+function(GUCE_config_lib LIBNAME)
   GU_config_lib( ${LIBNAME} )
-endfunction(GUCEF_config_lib)
+endfunction(GUCE_config_lib)
 
-function(GUCEF_config_plugin PLUGINNAME)
+function(GUCE_config_plugin PLUGINNAME)
   GU_config_plugin( ${PLUGINNAME} )
-endfunction(GUCEF_config_plugin)
+endfunction(GUCE_config_plugin)
 
-function(GUCEF_config_tool TOOLNAME)
+function(GUCE_config_tool TOOLNAME)
   GU_config_tool( ${TOOLNAME} )
-endfunction(GUCEF_config_tool)
+endfunction(GUCE_config_tool)
