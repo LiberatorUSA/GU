@@ -1,6 +1,6 @@
 @echo off
 
-SET GUCE_BATCHSTARTDIR=%CD%
+SET GU_BATCHSTARTDIR=%CD%
 
 ECHO *** Enable command extensions ***
 
@@ -12,76 +12,46 @@ IF ERRORLEVEL 1 (
 )
 ENDLOCAL
 
-ECHO *** Locating GUCEF ***
+ECHO *** Locating GUCE ***
 
-IF NOT DEFINED GUCEF_HOME (
-  ECHO GUCEF_HOME not defined, defaulting to local trunk copy
-  SET GUCEF_HOME=%CD%\..\..\..\..\GUCEF\trunk
-  cd "%GUCE_BATCHSTARTDIR%"
+IF NOT DEFINED GUCE_HOME (
+  ECHO GUCE_HOME not defined, defaulting to local trunk copy
+  SET GUCE_HOME=%CD%\..\..\..\..\GUCE\trunk
+  cd "%GU_BATCHSTARTDIR%"
 )
 
-ECHO GUCEF_HOME="%GUCEF_HOME%"
+ECHO GUCE_HOME="%GUCE_HOME%"
 
-ECHO *** Perform GUCE common CMake environment variable setup ***
+ECHO *** Invoking GUCE's CMakeCommon ***
 
-cd %GUCE_BATCHSTARTDIR%
-cd..
-cd..
-SET GUCE_HOME=%CD%
-
-IF NOT DEFINED FREETYPE_HOME (
-  ECHO FREETYPE_HOME environment variable not found, setting it
-  SET FREETYPE_HOME=%GUCE_HOME%\dependencies\freetype
-)
-
-IF NOT DEFINED OGRE_HOME (
-  ECHO OGRE_HOME environment variable not found, setting it
-  SET OGRE_HOME=%GUCE_HOME%\dependencies\Ogre
-)
-
-IF NOT DEFINED ZLIB_HOME (
-  ECHO ZLIB_HOME environment variable not found, setting it
-  SET ZLIB_HOME=%GUCE_HOME%\dependencies\zlib
-)
-
-IF NOT DEFINED ZZZIP_HOME (
-  ECHO ZZZIP_HOME environment variable not found, setting it
-  SET ZZZIP_HOME=%GUCE_HOME%\dependencies\zziplib
-)
-
-IF NOT DEFINED CEGUI_HOME (
-  ECHO CEGUI_HOME environment variable not found, setting it
-  SET CEGUI_HOME=%GUCE_HOME%\guidriverCEGUIOgre\dependency\CEGUI
-)
-
-IF NOT DEFINED MYGUI_HOME (
-  ECHO MYGUI_HOME environment variable not found, setting it
-  SET MYGUI_HOME=%MYGUI_HOME%\guidriverMyGUIOgre\dependencies\MyGUI
-)
-
-cd "%GUCE_BATCHSTARTDIR%"
-
-ECHO *** Invoking GUCEF's CMakeCommon ***
-
-SET SKIP_GUCEF_CMAKELISTSFILEGENERATION=TRUE
-cd %GUCEF_HOME%\projects\CMake\
-CALL %GUCEF_HOME%\projects\CMake\CMakeCommon.bat
-
-cd "%GUCE_BATCHSTARTDIR%"
+SET SKIP_GUCE_CMAKELISTSFILEGENERATION=TRUE
+cd %GUCE_HOME%\projects\CMake\
+CALL %GUCE_HOME%\projects\CMake\CMakeCommon.bat
+cd "%GU_BATCHSTARTDIR%"
 
 ECHO *** Generate CMakeLists.txt files ***
+
+
+cd..
+cd..
+SET GU_HOME=%CD%
+ECHO GU_HOME = %GU_HOME%
+cd "%GU_BATCHSTARTDIR%"
 
 SET NOPAUSE=TRUE
 CALL GenerateCMakeLists.bat
 
-SET OUTPUTDIR=%GUCE_HOME%\common\bin
-SET SRCROOTDIR=%GUCE_HOME%
+SET OUTPUTDIR=%GU_HOME%\common\bin
+SET SRCROOTDIR=%GU_HOME%
 
 ECHO CMake source dir = %SRCROOTDIR%
 ECHO CMake output root is = %OUTPUTDIR%
 
-cd "%GUCE_BATCHSTARTDIR%"
+cd "%GU_BATCHSTARTDIR%"
 
+IF NOT DEFINED NOPAUSE (
+  PAUSE
+)
 
 
 
