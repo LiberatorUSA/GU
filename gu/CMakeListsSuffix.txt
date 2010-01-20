@@ -1,0 +1,10 @@
+
+if (WIN32)
+  add_executable( GU WIN32 ${HEADER_FILES} ${SOURCE_FILES} )
+else()
+  add_executable( GU ${HEADER_FILES} ${SOURCE_FILES} )
+endif()
+add_dependencies( GU guCORE )
+target_link_libraries( GU guCORE )
+set_target_properties( GU PROPERTIES COMPILE_DEFINITIONS GU_BUILD_MODULE )
+GU_config_tool( GU )
