@@ -257,6 +257,10 @@ message( STATUS "GUCE_HOME=${ENV_GUCE_HOME}" )
 # Add GUCE's common include path
 include_directories("${ENV_GUCE_HOME}/common/include")
 
+# Setup GUCE dependencies
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/freetype ${GU_BINARY_DIR} )
+#add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain ${GU_BINARY_DIR} )
+
 # Setup GUCE modules
 add_subdirectory( ${ENV_GUCE_HOME}/guceCORE ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guceGUI ${GU_BINARY_DIR} )
