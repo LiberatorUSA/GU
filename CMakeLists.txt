@@ -34,6 +34,7 @@ include(GUConfigTargets)
 include(PreprocessorUtils)
 include(GUCEFFuncRedirect)
 include(GUCEFuncRedirect)
+include(OgreFuncRedirect)
 
 set(GU_TEMPLATES_DIR "${GU_SOURCE_DIR}/projects/CMake/Templates")
 set(GU_WORK_DIR ${GU_BINARY_DIR})
@@ -258,12 +259,21 @@ message( STATUS "GUCE_HOME=${ENV_GUCE_HOME}" )
 include_directories("${ENV_GUCE_HOME}/common/include")
 
 # Setup GUCE dependencies
-add_subdirectory( ${ENV_GUCE_HOME}/dependencies/freetype ${GU_BINARY_DIR} )
-#add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/GL ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D9 ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D10 ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D11 ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/GLES ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/PlugIns/OctreeSceneManager ${GU_BINARY_DIR} )
 
 # Setup GUCE modules
 add_subdirectory( ${ENV_GUCE_HOME}/guceCORE ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guceGUI ${GU_BINARY_DIR} )
+
+# Setup GUCE plugin dependencies
+add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/MyGUIEngine ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre/dependency/CEGUI ${GU_BINARY_DIR} )
 
 # Setup GUCE Plugin modules
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre ${GU_BINARY_DIR} )
