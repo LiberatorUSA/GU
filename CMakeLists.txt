@@ -255,10 +255,13 @@ add_subdirectory( ${ENV_GUCEF_HOME}/tools/CallstackLogAnalyzer ${GU_BINARY_DIR} 
 getenv_path( GUCE_HOME )
 message( STATUS "GUCE_HOME=${ENV_GUCE_HOME}" )
 
-# Add GUCE's common include path
-include_directories("${ENV_GUCE_HOME}/common/include")
-
 # Setup GUCE dependencies
+
+set( OGRE_BINARY_DIR ${GU_BINARY_DIR} )
+set( OGRE_TEMPLATES_DIR ${GUCE_SOURCE_DIR}/dependencies/Ogre/CMake/Templates )
+include( ${GUCE_SOURCE_DIR}/dependencies/Ogre/CMake/ConfigureBuild.cmake )
+include_directories( ${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain/include" )
+
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/GL ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D9 ${GU_BINARY_DIR} )
@@ -266,6 +269,9 @@ add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D10 ${
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D11 ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/GLES ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/PlugIns/OctreeSceneManager ${GU_BINARY_DIR} )
+
+# Add GUCE's common include path
+include_directories("${ENV_GUCE_HOME}/common/include")
 
 # Setup GUCE modules
 add_subdirectory( ${ENV_GUCE_HOME}/guceCORE ${GU_BINARY_DIR} )
