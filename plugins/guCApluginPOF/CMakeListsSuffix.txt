@@ -1,0 +1,6 @@
+
+add_library( guCApluginPOF ${HEADER_FILES} ${SOURCE_FILES} )
+add_dependencies( guCApluginPOF guCORE guceCORE guceGUI gucefCORE gucefMT gucefGUI gucefIMAGE gucefVFS gucefCOMCORE gucefCOM gucefDRN gucefINPUT gucefPATCHER )
+target_link_libraries( guCApluginPOF guCORE guceCORE guceGUI gucefCORE gucefMT gucefGUI gucefIMAGE gucefVFS gucefCOMCORE gucefCOM gucefDRN gucefINPUT gucefPATCHER )
+set_target_properties( guCApluginPOF PROPERTIES COMPILE_DEFINITIONS GU_CA_PLUGIN_POF_BUILD_MODULE )
+GU_config_lib( guCApluginPOF )
