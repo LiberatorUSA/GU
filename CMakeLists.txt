@@ -292,6 +292,9 @@ add_subdirectory( ${ENV_GUCE_HOME}/samples/refapp ${GU_BINARY_DIR} )
 add_subdirectory( guCORE )
 add_subdirectory( gu )
 
+# Setup GU plugins
+add_subdirectory( plugins/guCApluginPOF )
+
 # Install documentation
 add_subdirectory(docs)
 
