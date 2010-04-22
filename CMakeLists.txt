@@ -34,7 +34,6 @@ include(GUConfigTargets)
 include(PreprocessorUtils)
 include(GUCEFFuncRedirect)
 include(GUCEFuncRedirect)
-include(OgreFuncRedirect)
 
 set(GU_TEMPLATES_DIR "${GU_SOURCE_DIR}/projects/CMake/Templates")
 set(GU_WORK_DIR ${GU_BINARY_DIR})
@@ -206,6 +205,7 @@ add_subdirectory( ${ENV_GUCEF_HOME}/gucefINPUT ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefCOM ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefMULTIPLAY ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefDRN ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCEF_HOME}/gucefSMDRN ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefPATCHER ${GU_BINARY_DIR} )
 
 # Setup GUCEF plugin dependencies
@@ -255,13 +255,11 @@ add_subdirectory( ${ENV_GUCEF_HOME}/tools/CallstackLogAnalyzer ${GU_BINARY_DIR} 
 getenv_path( GUCE_HOME )
 message( STATUS "GUCE_HOME=${ENV_GUCE_HOME}" )
 
-# Setup GUCE dependencies
+# Setup Ogre dependencies
 
-set( OGRE_BINARY_DIR ${GU_BINARY_DIR} )
-set( OGRE_TEMPLATES_DIR ${GUCE_SOURCE_DIR}/dependencies/Ogre/CMake/Templates )
-include( ${GUCE_SOURCE_DIR}/dependencies/Ogre/CMake/ConfigureBuild.cmake )
-include_directories( "${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain/include" )
+add_subdirectory( ${ENV_GUCE_HOME}/dependencies/freetype ${GU_BINARY_DIR} )
 
+# Setup GUCE Ogre dependency
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/OgreMain ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/GL ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/RenderSystems/Direct3D9 ${GU_BINARY_DIR} )
@@ -272,18 +270,20 @@ add_subdirectory( ${ENV_GUCE_HOME}/dependencies/Ogre/PlugIns/OctreeSceneManager 
 
 # Add GUCE's common include path
 include_directories( "${ENV_GUCE_HOME}/common/include" )
-
 # Setup GUCE modules
 add_subdirectory( ${ENV_GUCE_HOME}/guceCORE ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guceGUI ${GU_BINARY_DIR} )
 
-# Setup GUCE plugin dependencies
+# Setup GUCE guidriverMyGUIOgre Plugin dependencies
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/MyGUIEngine ${GU_BINARY_DIR} )
-add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre/dependency/CEGUI ${GU_BINARY_DIR} )
+add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/Platforms/Ogre/OgrePlatform ${GU_BINARY_DIR} )
 
-# Setup GUCE Plugin modules
-add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre ${GU_BINARY_DIR} )
+# Setup GUCE guidriverMyGUIOgre Plugin module
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre ${GU_BINARY_DIR} )
+
+# Setup GUCE guidriverCEGUIOgre Plugin module
+#add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre/dependency/CEGUI ${GU_BINARY_DIR} )
+#add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre ${GU_BINARY_DIR} )
 
 # Setup GUCE Sample applications
 add_subdirectory( ${ENV_GUCE_HOME}/samples/refapp ${GU_BINARY_DIR} )
