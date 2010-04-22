@@ -185,7 +185,7 @@
 	<GUCE>
 		<CORE>
 			<CGUCEApplication>
-				<INPUTDRIVER module="$MODULEDIR$\plugins\inputdriverMSWINMSG" >
+				<INPUTDRIVER module="$MODULEDIR$\inputdriverMSWINMSG" >
 					<INPUTDRIVERPARAM key="HINSTANCE" value="$ENVVAR:HINSTANCE$" />
 					<INPUTDRIVERPARAM key="HWND" value="$ENVVAR:HWND$" />
 				</INPUTDRIVER>

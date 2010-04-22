@@ -121,10 +121,9 @@ main( const char* argv[] ,
         GUCE::GUI::CGUIManager::Instance();
         GU::CORE::CGameCenter::Instance();
 
-        // Load all plugins
-        GUCEF::CORE::CPluginControl* pluginControl = GUCEF::CORE::CPluginControl::Instance();
-        pluginControl->SetPluginDir( "$MODULEDIR$\\plugins" );
-        pluginControl->LoadAll(); 
+        // Load data store codec's so we can load config
+        GUCEF::CORE::CDStoreCodecPluginManager* dstoreCodecPluginManager = GUCEF::CORE::CDStoreCodecPluginManager::Instance();
+        dstoreCodecPluginManager->LoadAll( GUCEF::CORE::RelativePath( "$MODULEDIR$" ) ); 
 
         /*
          *      Load the configuration
