@@ -32,17 +32,17 @@ REM -----------------------------------------------------
 
 :FIND_GU_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 
-SET GENERATORPATH=%GUCE_THEBATCHDIR%\..\..\common\bin\MVC9\bin\Debug
+SET GENERATORPATH=%GU_THEBATCHDIR%\..\..\common\bin\MVC9\bin\Debug
 SET GENERATOREXE=CMakeListGenerator.exe
 SET EXETEST="%GENERATORPATH%\%GENERATOREXE%"
 
-ECHO Test path = %EXETEST%
-IF EXIST %EXETEST% (
+ECHO Test path = "%EXETEST%"
+IF EXIST "%EXETEST%" (
   ECHO Warning: Using GU CMake debug MVC9 development version of the CMakeListGenerator
   GOTO RUN_CMAKELISTGENERATOR
 )
 
-IF NOT EXIST %EXETEST% (
+IF NOT EXIST "%EXETEST%" (
   ECHO Cannot locate GU CMake MVC9 debug development version of the CMakeListGenerator, trying GUCE
   GOTO FIND_GUCE_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 )
