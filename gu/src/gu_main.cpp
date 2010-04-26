@@ -89,6 +89,8 @@ main( const char* argv[] ,
     //GUCEF::CORE::GUCEF_SetStackLogging( 1 );
     #endif /* GUCE_CORE_DEBUG_MODE ? */
 
+    GUCEF::CORE::CLogManager* logManager = GUCEF::CORE::CLogManager::Instance();
+    
     GUCEF::CORE::CString logFilename = GUCEF::CORE::RelativePath( "$CURWORKDIR$" );
     GUCEF::CORE::AppendToPath( logFilename, "GU_MG.txt" );
     GUCEF::CORE::CFileAccess logFileAccess( logFilename, "w" );
@@ -97,13 +99,15 @@ main( const char* argv[] ,
     #ifdef GUCE_CORE_DEBUG_MODE
     logger.SetMinimalLogLevel( GUCEF::CORE::LOGLEVEL_NORMAL );
     #endif /* GUCE_CORE_DEBUG_MODE ? */
-    GUCEF::CORE::CLogManager::Instance()->AddLogger( &logger ); 
+    logManager->AddLogger( &logger ); 
 
     #if defined( GUCEF_MSWIN_BUILD ) && defined( GUCE_CORE_DEBUG_MODE )
     GUCEF::CORE::CMSWinConsoleLogger consoleOut;
     consoleOut.SetMinimalLogLevel( GUCEF::CORE::LOGLEVEL_NORMAL );
-    GUCEF::CORE::CLogManager::Instance()->AddLogger( &consoleOut );
+    logManager->AddLogger( &consoleOut );
     #endif /* GUCEF_MSWIN_BUILD && GUCE_CORE_DEBUG_MODE ? */
+    
+    logManager->FlushBootstrapLogEntriesToLogs();
                 
     try 
     {        
