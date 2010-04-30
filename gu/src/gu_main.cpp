@@ -124,7 +124,12 @@ main( const char* argv[] ,
          */
         GUCE::GUI::CGUIManager::Instance();
         GU::CORE::CGameCenter::Instance();
-
+        
+        #if defined( GUCEF_MSWIN_BUILD )
+        GUCEF::CORE::CMsWin32ConsoleWindow win32Console;
+        win32Console.ConsoleWindowCreate();
+	    win32Console.Show();
+        #endif 
         // Load data store codec's so we can load config
         GUCEF::CORE::CDStoreCodecPluginManager* dstoreCodecPluginManager = GUCEF::CORE::CDStoreCodecPluginManager::Instance();
         dstoreCodecPluginManager->LoadAll( GUCEF::CORE::RelativePath( "$MODULEDIR$" ) ); 
