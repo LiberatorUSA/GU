@@ -194,27 +194,27 @@ bool
 CProductManager::LoadConfig( const GUCEF::CORE::CDataNode& node )
 {GU_TRACE;
 
-    GUCEF_SYSTEM_LOG( 0, "Loading the product manager configuration" );
+    GUCEF_SYSTEM_LOG( GUCEF::CORE::LOGLEVEL_NORMAL, "CProductManager: Loading the configuration" );
 
     GUCEF::CORE::CDataNode* n = node.Search( "GU%CORE%CProductManager", '%', false );
     if ( NULL != n )
     {
-        GUCEF::CORE::CDataNode::TNodeAtt* att = NULL;
+        GUCEF::CORE::CDataNode::TKeyValuePair* att = NULL;
         att = n->GetAttribute( "ProductListPath" );
         if ( NULL != att )
         {
-            m_productListPath = att->value;
+            m_productListPath = att->second;
         }
         att = n->GetAttribute( "ProductListCodec" );
         if ( NULL != att )
         {
-            m_productListCodec = att->value;
+            m_productListCodec = att->second;
         }
 
         att = n->GetAttribute( "CommonProductRoot" );
         if ( NULL != att )
         {
-            m_productRoot = att->value;
+            m_productRoot = att->second;
         }
 
         GUCEF::CORE::CDataNode productList;        

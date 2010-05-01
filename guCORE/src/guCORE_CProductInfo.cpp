@@ -396,41 +396,41 @@ CProductInfo::LoadConfig( const GUCEF::CORE::CDataNode& node )
     const GUCEF::CORE::CDataNode* infoNode = node.Find( "ProductInfo" );
     if ( NULL != infoNode )
     {
-        const GUCEF::CORE::CDataNode::TNodeAtt* att = NULL;
+        const GUCEF::CORE::CDataNode::TKeyValuePair* att = NULL;
         att = infoNode->GetAttribute( "Name" );
         if ( NULL != att )
         {
-            m_name = att->value;
+            m_name = att->second;
         }
         att = infoNode->GetAttribute( "Version" );
         if ( NULL != att )
         {
-            m_version = GUCEF::CORE::StringToVersion( att->value );
+            m_version = GUCEF::CORE::StringToVersion( att->second );
         }
         att = infoNode->GetAttribute( "Description" );
         if ( NULL != att )
         {
-            m_name = att->value;
+            m_name = att->second;
         }
         att = infoNode->GetAttribute( "ProductType" );
         if ( NULL != att )
         {
-            m_name = StringToProductType( att->value );
+            m_name = StringToProductType( att->second );
         }
         att = infoNode->GetAttribute( "DeploymentState" );
         if ( NULL != att )
         {
-            m_name = StringToDeploymentState( att->value );
+            m_name = StringToDeploymentState( att->second );
         }        
         att = infoNode->GetAttribute( "PatchListURL" );
         if ( NULL != att )
         {
-            m_patchListURL = att->value;
+            m_patchListURL = att->second;
         }
         att = infoNode->GetAttribute( "InfoURL" );
         if ( NULL != att )
         {
-            m_infoURL = att->value;
+            m_infoURL = att->second;
         }
         return true;
     }

@@ -12,6 +12,11 @@
 					<Alias name="guiedit" path="\GUCE\GUI\CGUIEditor" function="Show" />
 				</ConsoleAliasList>
 			</CSysConsole>
+			<CGenericPluginManager>
+				<Plugin pluginPath="guidriverMyGUIOgre_d" />
+				<Plugin pluginPath="vfspluginVP_d" />
+				<Plugin pluginPath="vfspluginZIP_d" />
+			</CGenericPluginManager>
 		</CORE>
 		<VFS>
 			<CFPCodecPluginManager plugincount="0" />
@@ -217,7 +222,7 @@
 			</CGUCEApplication>
 		</CORE>
 		<GUI>
-			<CGUIManager>
+			<CGUIManager Driver="guidriverMyGUIOgre_d" >
 				<LoadScheme name="TaharezLook.scheme" resourceGroup="GUI" />
 				<!-- <LoadImageSet name="" resourceGroup="GUI" /> -->
 				<!-- <LoadLookNFeel name="" resourceGroup="GUI" /> -->

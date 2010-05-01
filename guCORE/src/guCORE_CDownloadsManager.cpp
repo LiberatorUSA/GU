@@ -271,16 +271,16 @@ CDownloadsManager::LoadConfig( const GUCEF::CORE::CDataNode& node )
     GUCEF::CORE::CDataNode* n = node.Search( "GU%CORE%CDownloadsManager", '%', false );
     if ( NULL != n )
     {
-        GUCEF::CORE::CDataNode::TNodeAtt* att = NULL;
+        GUCEF::CORE::CDataNode::TKeyValuePair* att = NULL;
         att = n->GetAttribute( "AvailableDownloadsListURL" );
         if ( NULL != att )
         {
-            m_adListUrlRetiever.GetURL().SetURL( att->value );
+            m_adListUrlRetiever.GetURL().SetURL( att->second );
         }
         att = n->GetAttribute( "ResumeDownloadsOnStartup" );
         if ( NULL != att )
         {
-            m_resumeDownloadsOnStartup = GUCEF::CORE::StringToBool( att->value );
+            m_resumeDownloadsOnStartup = GUCEF::CORE::StringToBool( att->second );
         }
     }
     return false;
