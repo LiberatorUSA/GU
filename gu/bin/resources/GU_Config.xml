@@ -222,7 +222,7 @@
 			</CGUCEApplication>
 		</CORE>
 		<GUI>
-			<CGUIManager Driver="guidriverMyGUIOgre_d" >
+			<CGUIManager Driver="MyGUIOgre" >
 				<LoadScheme name="TaharezLook.scheme" resourceGroup="GUI" />
 				<!-- <LoadImageSet name="" resourceGroup="GUI" /> -->
 				<!-- <LoadLookNFeel name="" resourceGroup="GUI" /> -->
