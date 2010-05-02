@@ -23,14 +23,11 @@
 			<CVFS maxmemload="102400" >
 				<vfsroot Path="$MODULEDIR$\data" Writeable="false" ArchiveName="data" MountArchives="true" />
 				<vfsroot Path="$MODULEDIR$\data\tmp" Writeable="true" ArchiveName="tmp" MountArchives="false" />
-				<vfsroot Path="$MODULEDIR$\$UPDIR$\SampleData" Writeable="false" MountArchives="true" />
-				<vfsroot Path="$MODULEDIR$\$UPDIR$\SampleData\GU" Writeable="false" MountArchives="false" />
+				<vfsroot Path="$MODULEDIR$\..\..\..\SampleData" Writeable="false" MountArchives="true" />
+				<vfsroot Path="$MODULEDIR$\..\..\..\SampleData\GU" Writeable="false" MountArchives="false" />
 				<vfsroot Path="F:\Games\BtRL\Demo" Writeable="false" ArchiveName="BTRL" MountArchives="true" />
 			</CVFS>
 		</VFS>
-		<CVFS maxmemload="1024" >
-			<vfsroot path="$CURWORKDIR$\data" writeable="false" />
-		</CVFS>
 		<INPUT>
 			<CInputProfileManager ActionMapCount="1" ProfileCount="1" >
 				<InputActionMap name="default" MouseButtonMapCount="8" KeyboardKeyMapCount="127" DeviceBoolMapCount="8" DeviceVarMapCount="8" >
@@ -199,7 +196,7 @@
 						<OGREPlugin filename="RenderSystem_GL_d" />
 					</OGREPlugins>
 					<OgreRecourceGroups>
-						<OgreRecourceGroup name="Bootstrap" path="$MODULEDIR$\$UPDIR$\SampleData\Ogre\OgreCore.zip" type="Zip" />
+						<OgreRecourceGroup name="Bootstrap" path="$MODULEDIR$\..\..\..\SampleData\Ogre\OgreCore.zip" type="Zip" />
 				                <!-- <OgreRecourceGroup name="GUI" path="CEGUI/configs" type="gucefVFS" /> -->
 						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/fonts" type="gucefVFS" /> -->
 						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/imagesets" type="gucefVFS" /> -->
