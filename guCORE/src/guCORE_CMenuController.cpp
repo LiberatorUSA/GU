@@ -38,6 +38,11 @@
 #define GUCEF_GUI_CGUIMANAGER_H
 #endif /* GUCEF_GUI_CGUIMANAGER_H ? */
 
+#ifndef GUCE_GUI_CGUIMANAGER_H
+#include "CGUIManager.h"
+#define GUCE_GUI_CGUIMANAGER_H
+#endif /* GUCE_GUI_CGUIMANAGER_H ? */
+
 #ifndef GUCE_CORE_MISCUTILS_H
 #include "miscutils.h"
 #define GUCE_CORE_MISCUTILS_H
@@ -117,8 +122,12 @@ bool
 CMenuController::InitGUIForms( void )
 {GU_TRACE;
 
+    m_mainMenuForm.SetContext( 
+    
+    m_guiConfigRoot = "GUI/" + GUCE::GUI::CGUIManager::Instance()->GetSelectedDriverName();
+    
     // Load the main menu form and setup the callbacks
-    CString layoutFilePath = m_guiConfigRoot;
+    CString layoutFilePath = m_guiConfigRoot;    
     GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/MainMenu.layout" );
     if ( m_mainMenuForm.LoadLayout( layoutFilePath ) )
     {
