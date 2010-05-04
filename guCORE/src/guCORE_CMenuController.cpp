@@ -119,16 +119,16 @@ CMenuController::GetClassTypeName( void ) const
 /*-------------------------------------------------------------------------*/
 
 bool
-CMenuController::InitGUIForms( void )
+CMenuController::InitGUIForms( GUCE::CORE::TWindowContextPtr& windowContext )
 {GU_TRACE;
 
-    m_mainMenuForm.SetContext( 
-    
+    GUCEF::GUI::TGuiContextPtr guiContext = windowContext->GetGuiContext();    
     m_guiConfigRoot = "GUI/" + GUCE::GUI::CGUIManager::Instance()->GetSelectedDriverName();
     
     // Load the main menu form and setup the callbacks
     CString layoutFilePath = m_guiConfigRoot;    
     GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/MainMenu.layout" );
+    m_mainMenuForm.SetContext( guiContext );
     if ( m_mainMenuForm.LoadLayout( layoutFilePath ) )
     {
         SubscribeTo( m_mainMenuForm.GetSettingsButton()                                             ,
@@ -169,6 +169,7 @@ CMenuController::InitGUIForms( void )
     // Load the settings menu form and setup the callbacks
     layoutFilePath = m_guiConfigRoot;
     GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/SettingsMenu.layout" );
+    m_settingsMenuForm.SetContext( guiContext );
     if ( m_settingsMenuForm.LoadLayout( layoutFilePath ) )
     {
         SubscribeTo( m_settingsMenuForm.GetMenuButton()                                         ,
@@ -189,7 +190,7 @@ CMenuController::InitGUIForms( void )
         if ( !vsForm.SetVideoOptions( videoOptions ) ) return false;
         
         GUCE::CORE::CVideoSettings videoSettings;
-        GUCE::CORE::CWindowManager::TWindowContextPtr windowContext = GUCE::CORE::CGUCEApplication::Instance()->GetPrimaryWindowContext();
+        GUCE::CORE::TWindowContextPtr windowContext = GUCE::CORE::CGUCEApplication::Instance()->GetPrimaryWindowContext();
         GUCE::CORE::CVideoSettings::RetrieveSettingsFromRenderWindow( *windowContext->GetOgreWindowPtr() ,
                                                                       videoSettings                      );
         if ( !vsForm.SetVideoSettings( videoSettings ) ) return false;
@@ -205,6 +206,7 @@ CMenuController::InitGUIForms( void )
     // Load the single player menu form and setup the callbacks
     layoutFilePath = m_guiConfigRoot;
     GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/SinglePlayerMenu.layout" );
+    m_singlePlayerMenuForm.SetContext( guiContext );
     if ( m_singlePlayerMenuForm.LoadLayout( layoutFilePath ) )
     {
         SubscribeTo( m_singlePlayerMenuForm.GetMenuButton()                                         ,
@@ -220,6 +222,7 @@ CMenuController::InitGUIForms( void )
     // Load the downloads menu form and setup the callbacks
     layoutFilePath = m_guiConfigRoot;
     GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/DownloadsMenu.layout" );
+    m_downloadsMenuForm.SetContext( guiContext );
     if ( m_downloadsMenuForm.LoadLayout( layoutFilePath ) )
     {
         SubscribeTo( m_downloadsMenuForm.GetMenuButton()                                         ,
@@ -237,6 +240,7 @@ CMenuController::InitGUIForms( void )
     
     layoutFilePath = m_guiConfigRoot;
     GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/MeshViewer.layout" );
+    m_meshViewer.GetMeshViewerForm().SetContext( guiContext );
     if ( m_meshViewer.GetMeshViewerForm().LoadLayout( layoutFilePath ) )
     {
         layoutFilePath = m_guiConfigRoot;
@@ -377,7 +381,7 @@ CMenuController::OnVideoSettingsFormApplyButtonClicked( GUCEF::CORE::CNotifier* 
     GUCE::CORE::CVideoSettings videoSettings;    
     if ( m_settingsMenuForm.GetVideoSettingsForm().GetVideoSettings( videoSettings ) )
     {
-        GUCE::CORE::CWindowManager::TWindowContextPtr windowContext = GUCE::CORE::CGUCEApplication::Instance()->GetPrimaryWindowContext();
+        GUCE::CORE::TWindowContextPtr windowContext = GUCE::CORE::CGUCEApplication::Instance()->GetPrimaryWindowContext();
         GUCE::CORE::CWindowManager::Instance()->ApplyVideoSettings( windowContext, videoSettings );
     }
 }

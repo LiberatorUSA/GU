@@ -36,6 +36,11 @@
 #define GUCEF_CORE_CTEVENTHANDLERFUNCTOR_H
 #endif /* GUCEF_CORE_CTEVENTHANDLERFUNCTOR_H ? */
 
+#ifndef GUCE_CORE_CWINDOWCONTEXT_H
+#include "CWindowContext.h"
+#define GUCE_CORE_CWINDOWCONTEXT_H
+#endif /* GUCE_CORE_CWINDOWCONTEXT_H ? */
+
 #ifndef GUCE_GUI_CGUIMESHVIEWER_H
 #include "guceGUI_CMeshViewer.h"
 #define GUCE_GUI_CGUIMESHVIEWER_H
@@ -98,7 +103,7 @@ class GU_CORE_EXPORT_CPP CMenuController : public GUCEF::CORE::CObservingNotifie
 
     virtual ~CMenuController();
 
-    bool InitGUIForms( void );
+    bool InitGUIForms( GUCE::CORE::TWindowContextPtr& windowContext );
     
     void SetVisibility( const bool isVisible );
     

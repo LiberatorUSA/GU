@@ -144,7 +144,7 @@ class GU_CORE_EXPORT_CPP CGameCenter : public GUCEF::CORE::CObservingNotifier
     
     void OnAppInitEvent( GUCEF::CORE::CICloneable* eventdata );
     
-    void OnStartupComplete( void );
+    void OnStartupComplete( GUCE::CORE::TWindowContextPtr& windowContext );
     
     void ShowMenu( void );
 

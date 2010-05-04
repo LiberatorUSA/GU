@@ -296,10 +296,10 @@ CGameCenter::ShowMenu( void )
 /*-------------------------------------------------------------------------*/
 
 void
-CGameCenter::OnStartupComplete( void )
+CGameCenter::OnStartupComplete( GUCE::CORE::TWindowContextPtr& windowContext )
 {GU_TRACE;
 
-    if ( m_menuController.InitGUIForms() )
+    if ( m_menuController.InitGUIForms( windowContext ) )
     {
         if ( m_appArgsList.GetCount() == 0 )
         {
@@ -360,8 +360,9 @@ CGameCenter::OnNotify( GUCEF::CORE::CNotifier* notifier                 ,
     }
     else
     if ( GUCE::GUI::CGUIManager::GUIInitializedEvent == eventid )
-    {
-        OnStartupComplete();
+    {        
+        GUCE::GUI::CGUIManager::TGUIInitializedEventData* eData = static_cast< GUCE::GUI::CGUIManager::TGUIInitializedEventData* >( eventdata );
+        OnStartupComplete( eData->GetData() );
     }
 }
 
