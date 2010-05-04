@@ -275,6 +275,7 @@ add_subdirectory( ${ENV_GUCE_HOME}/guceCORE ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guceGUI ${GU_BINARY_DIR} )
 
 # Setup GUCE guidriverMyGUIOgre Plugin dependencies
+add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/Common ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/MyGUIEngine ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/Platforms/Ogre/OgrePlatform ${GU_BINARY_DIR} )
 
