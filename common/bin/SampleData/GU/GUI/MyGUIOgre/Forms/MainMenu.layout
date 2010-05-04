@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
     <Widget type="Window" skin="WindowC" position="344 272 368 200" layer="Back" name="MainMenu">
         <Property key="Widget_Caption" value="Main Menu"/>
