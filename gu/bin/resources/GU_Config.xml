@@ -16,6 +16,7 @@
 				<Plugin pluginPath="guidriverMyGUIOgre_d" />
 				<Plugin pluginPath="vfspluginVP_d" />
 				<Plugin pluginPath="vfspluginZIP_d" />
+				<Plugin pluginPath="guCApluginPOF_d" />
 			</CGenericPluginManager>
 		</CORE>
 		<VFS>
