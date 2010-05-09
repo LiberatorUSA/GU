@@ -289,6 +289,7 @@ add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre/dependencies/MyGUI/Platfor
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverMyGUIOgre ${GU_BINARY_DIR} )
 
 # Setup GUCE guidriverCEGUIOgre Plugin module
+add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre/dependency/CEGUI/dependencies/pcre ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre/dependency/CEGUI ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCE_HOME}/guidriverCEGUIOgre ${GU_BINARY_DIR} )
 

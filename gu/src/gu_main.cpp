@@ -129,7 +129,8 @@ main( const char* argv[] ,
         GUCEF::CORE::CMsWin32ConsoleWindow win32Console;
         win32Console.ConsoleWindowCreate();
 	    win32Console.Show();
-        #endif 
+        #endif
+         
         // Load data store codec's so we can load config
         GUCEF::CORE::CDStoreCodecPluginManager* dstoreCodecPluginManager = GUCEF::CORE::CDStoreCodecPluginManager::Instance();
         dstoreCodecPluginManager->LoadAll( GUCEF::CORE::RelativePath( "$MODULEDIR$" ) ); 

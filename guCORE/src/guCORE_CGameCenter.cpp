@@ -301,13 +301,6 @@ CGameCenter::OnStartupComplete( GUCE::CORE::TWindowContextPtr& windowContext )
 
     if ( m_menuController.InitGUIForms( windowContext ) )
     {
-        if ( m_appArgsList.GetCount() == 0 )
-        {
-            ShowMenu();
-            m_startupComplete = true;
-            return;
-        }
-        
         if ( m_appArgsList.HasKey( "LaunchSPGame" ) )
         {
             LaunchSPGame( m_appArgsList.GetValue( "LaunchSPGame" ) );
@@ -317,8 +310,17 @@ CGameCenter::OnStartupComplete( GUCE::CORE::TWindowContextPtr& windowContext )
         {
             LaunchMPGame( m_appArgsList.GetValue( "LaunchMPGame" ) );
         }
+        else
+        {
+            ShowMenu();
+        }
+        m_startupComplete = true;
     }
-    m_startupComplete = true;
+    else
+    {
+        GUCE::CORE::CGUCEApplication::Instance()->Stop();
+    }
+    
 }
 
 /*-------------------------------------------------------------------------*/

@@ -216,7 +216,7 @@ CMenuController::InitGUIForms( GUCE::CORE::TWindowContextPtr& windowContext )
     }
     else
     {
-        return false;
+        //return false;
     }
 
     // Load the downloads menu form and setup the callbacks
@@ -235,7 +235,7 @@ CMenuController::InitGUIForms( GUCE::CORE::TWindowContextPtr& windowContext )
     }
     else
     {
-        return false;
+        //return false;
     }
     
     layoutFilePath = m_guiConfigRoot;
@@ -255,7 +255,7 @@ CMenuController::InitGUIForms( GUCE::CORE::TWindowContextPtr& windowContext )
     }
     else
     {
-        return false;
+        //return false;
     }
     
     NotifyObservers( MenuSystemInitializedEvent );
