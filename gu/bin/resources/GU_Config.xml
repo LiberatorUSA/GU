@@ -198,14 +198,7 @@
 					</OGREPlugins>
 					<OgreRecourceGroups>
 						<OgreRecourceGroup name="Bootstrap" path="$MODULEDIR$\..\..\..\SampleData\Ogre\OgreCore.zip" type="Zip" />
-				                <!-- <OgreRecourceGroup name="GUI" path="CEGUI/configs" type="gucefVFS" /> -->
-						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/fonts" type="gucefVFS" /> -->
-						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/imagesets" type="gucefVFS" /> -->
-						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/layouts" type="gucefVFS" /> -->
-						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/looknfeel" type="gucefVFS" /> -->
-						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/lua_scripts" type="gucefVFS" /> -->
-						<!-- <OgreRecourceGroup name="GUI" path="CEGUI/schemes" type="gucefVFS" /> -->
-						<OgreRecourceGroup name="GUI" path="MyGUI" type="gucefVFS" />
+						<OgreRecourceGroup name="guceMyGUIOgre" path="MyGUI" type="gucefVFS" />
 					</OgreRecourceGroups>
 				</OGRE>
 				<VideoSettings>
@@ -220,15 +213,10 @@
 			</CGUCEApplication>
 		</CORE>
 		<GUI>
-			<CGUIManager Driver="MyGUIOgre" >
-				<LoadScheme name="TaharezLook.scheme" resourceGroup="GUI" />
-				<!-- <LoadImageSet name="" resourceGroup="GUI" /> -->
-				<!-- <LoadLookNFeel name="" resourceGroup="GUI" /> -->
-				<!-- <LoadLayout name="" resourceGroup="GUIlayouts" namePrefix="" /> -->
-				<LoadFont name="tahoma-12.font" resourceGroup="GUI" />
-				<DefaultFont name="tahoma-12" />
-				<DefaultMouseCursor imageSet="TaharezLook" imageName="MouseArrow" />
-			</CGUIManager>
+			<CGUIManager Driver="MyGUIOgre" />
+			<guceMyGUIOgre>
+				<ResourceGroup Name="guceMyGUIOgre" />
+			</guceMyGUIOgre>
 		</GUI>
 	</GUCE>
 	<GU>

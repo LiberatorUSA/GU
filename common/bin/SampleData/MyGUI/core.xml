@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyGUI>
+<MyGUI type="List">
 
-    <MyGUI type="List">
-	    <List file="core.lang" group="GUI"/>
-	    <List file="core.layer" group="GUI"/>
-	    <List file="core.skin" group="GUI"/>
-	    <List file="core.font" group="GUI"/>
-	    <List file="core.pointer" group="GUI"/>
-	    <List file="core.plugin"/>
-    </MyGUI>
+	<List file="core_theme.xml"/>
+	<List file="core_language.xml"/>
+	<List file="core_font.xml"/>
+	<List file="core_resource.xml"/>
+	<List file="core_skin.xml"/>
+	<List file="core_pointer.xml"/>
+	<List file="core_layer.xml"/>
+	<List file="core_settings.xml"/>
 
 </MyGUI>
