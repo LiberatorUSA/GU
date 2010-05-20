@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowCSX" position="136 148 564 248" layer="Back">
+        <Property key="Widget_Caption" value="FileSystemDialog"/>
+        <Widget type="Button" skin="Button" position="480 149 68 28" name="OkButton">
+            <Property key="Widget_Caption" value="Ok"/>
+            <Property key="Widget_Visible" value="true"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="480 181 68 27" name="CancelButton">
+            <Property key="Widget_Caption" value="Cancel"/>
+            <Property key="Widget_Visible" value="true"/>
+        </Widget>
+        <Widget type="ComboBox" skin="ComboBox" position="4 149 472 32"/>
+        <Widget type="Edit" skin="Edit" position="4 181 472 28"/>
+        <Widget type="MultiList" skin="MultiList" position="0 1 548 144"/>
+    </Widget>
+</MyGUI>

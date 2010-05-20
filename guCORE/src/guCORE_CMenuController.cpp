@@ -244,13 +244,15 @@ CMenuController::InitGUIForms( GUCE::CORE::TWindowContextPtr& windowContext )
     if ( m_meshViewer.GetMeshViewerForm().LoadLayout( layoutFilePath ) )
     {
         layoutFilePath = m_guiConfigRoot;
-        GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/FileSystemDialog.layout" );    
-        if ( m_meshViewer.GetFileOpenDialog().LoadLayout( layoutFilePath ) )
+        GUCEF::CORE::AppendToPath( layoutFilePath, "Forms/FileSystemDialog.layout" );
+        GUCEF::GUI::CFileSystemDialog* fileOpenDialog = m_meshViewer.GetFileOpenDialog();    
+        if ( NULL != fileOpenDialog )
         {
+            fileOpenDialog->LoadLayout( layoutFilePath );
         }
         else
         {
-            return false;
+           // return false;
         }
     }
     else
