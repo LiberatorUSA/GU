@@ -97,7 +97,7 @@ main( const char* argv[] ,
     
     GUCEF::CORE::CStdLogger logger( logFileAccess );
     #ifdef GUCE_CORE_DEBUG_MODE
-    logger.SetMinimalLogLevel( GUCEF::CORE::LOGLEVEL_BELOW_NORMAL );
+    logger.SetMinimalLogLevel( GUCEF::CORE::LOGLEVEL_EVERYTHING );
     #endif /* GUCE_CORE_DEBUG_MODE ? */
     logManager->AddLogger( &logger ); 
 

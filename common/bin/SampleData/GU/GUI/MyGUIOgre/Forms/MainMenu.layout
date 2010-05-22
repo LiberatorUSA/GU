@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowC" position="344 272 368 200" layer="Back" name="MainMenu">
+    <Widget type="Window" skin="WindowC" position="200 216 368 200" align="Center" layer="Back" name="MainMenu">
         <Property key="Widget_Caption" value="Main Menu"/>
         <Widget type="Button" skin="Button" position="204 65 132 32" layer="Back" name="SettingsButton">
             <Property key="Widget_Caption" value="Settings"/>
         </Widget>
         <Widget type="Button" skin="Button" position="52 25 132 32" layer="Back" name="SingleplayerButton">
-            <Property key="Widget_Caption" value="Single Player"/>
+            <Property key="Widget_Caption" value="Apps"/>
         </Widget>
         <Widget type="Button" skin="Button" position="124 113 132 32" layer="Back" name="ExitButton">
             <Property key="Widget_Caption" value="Exit"/>
         </Widget>
         <Widget type="Button" skin="Button" position="52 65 132 31" layer="Back" name="MultiplayerButton">
-            <Property key="Widget_Caption" value="Multi Player"/>
+            <Property key="Widget_Caption" value="Market"/>
         </Widget>
         <Widget type="Button" skin="Button" position="204 25 136 32" layer="Back" name="DownloadsButton">
             <Property key="Widget_Caption" value="Downloads"/>
