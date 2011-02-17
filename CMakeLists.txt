@@ -222,10 +222,10 @@ add_subdirectory( ${ENV_GUCEF_HOME}/gucefVFS/plugins/vfspluginDVP ${GU_BINARY_DI
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefVFS/plugins/vfspluginVP ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefVFS/plugins/vfspluginZIP ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefIMAGE/plugins/imgpluginFreeImage ${GU_BINARY_DIR} )
-add_subdirectory( ${ENV_GUCEF_HOME}/gucefIMAGE/plugins/imgpluginDEVIL ${GU_BINARY_DIR} )
+#add_subdirectory( ${ENV_GUCEF_HOME}/gucefIMAGE/plugins/imgpluginDEVIL ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefINPUT/plugins/inputdriverOIS ${GU_BINARY_DIR} )
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefINPUT/plugins/inputdriverMSWINMSG ${GU_BINARY_DIR} )
-add_subdirectory( ${ENV_GUCEF_HOME}/gucefINPUT/plugins/inputdriverDIRECTINPUT8 ${GU_BINARY_DIR} )
+#add_subdirectory( ${ENV_GUCEF_HOME}/gucefINPUT/plugins/inputdriverDIRECTINPUT8 ${GU_BINARY_DIR} )
 
 # Setup GUCEF Test applications
 add_subdirectory( ${ENV_GUCEF_HOME}/gucefVFS_TestApp ${GU_BINARY_DIR} )
