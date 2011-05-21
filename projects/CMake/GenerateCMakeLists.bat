@@ -38,12 +38,12 @@ SET EXETEST="%GENERATORPATH%\%GENERATOREXE%"
 
 ECHO Test path = "%EXETEST%"
 IF EXIST "%EXETEST%" (
-  ECHO Warning: Using GU CMake debug MVC9 development version of the CMakeListGenerator
+  ECHO Warning: Using GU CMake debug MVC9 development version of the ProjectGenerator
   GOTO RUN_CMAKELISTGENERATOR
 )
 
 IF NOT EXIST "%EXETEST%" (
-  ECHO Cannot locate GU CMake MVC9 debug development version of the CMakeListGenerator, trying GUCE
+  ECHO Cannot locate GU CMake MVC9 debug development version of the ProjectGenerator, trying GUCE
   GOTO FIND_GUCE_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 )
 
@@ -55,17 +55,17 @@ REM -----------------------------------------------------
 :FIND_GUCE_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 
 SET GENERATORPATH=%GUCE_HOME%\..\..\common\bin\MVC9\bin\Debug
-SET GENERATOREXE=CMakeListGenerator.exe
+SET GENERATOREXE=ProjectGenerator.exe
 SET EXETEST="%GENERATORPATH%\%GENERATOREXE%"
 
 ECHO Test path = %EXETEST%
 IF EXIST %EXETEST% (
-  ECHO Warning: Using GUCE CMake debug MVC9 development version of the CMakeListGenerator
+  ECHO Warning: Using GUCE CMake debug MVC9 development version of the ProjectGenerator
   GOTO RUN_CMAKELISTGENERATOR
 )
 
 IF NOT EXIST %EXETEST% (
-  ECHO Cannot locate GUCE CMake MVC9 debug development version of the CMakeListGenerator, trying GUCEF
+  ECHO Cannot locate GUCE CMake MVC9 debug development version of the ProjectGenerator, trying GUCEF
   GOTO FIND_GUCEF_OLD_SLN_DEBUG_CMAKELISTGENERATOR
 )
 
@@ -77,17 +77,17 @@ REM -----------------------------------------------------
 :FIND_GUCEF_OLD_SLN_DEBUG_CMAKELISTGENERATOR
 
 SET GENERATORPATH=%GUCEF_HOME%\common\bin\Debug_MVC9
-SET GENERATOREXE=CMakeListGenerator_d.exe
+SET GENERATOREXE=ProjectGenerator_d.exe
 SET EXETEST=%GENERATORPATH%\%GENERATOREXE%
 
 ECHO Test path = %EXETEST%
 IF EXIST %EXETEST% (
-  ECHO Warning: Using GUCEF Debug_MVC9 development version of the CMakeListGenerator
+  ECHO Warning: Using GUCEF Debug_MVC9 development version of the ProjectGenerator
   GOTO RUN_CMAKELISTGENERATOR
 )
 
 IF NOT EXIST %EXETEST% (
-  ECHO Cannot locate old GUCEF MVC9 debug development version of the CMakeListGenerator, trying CMake version
+  ECHO Cannot locate old GUCEF MVC9 debug development version of the ProjectGenerator, trying CMake version
   GOTO FIND_GUCEF_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 )
 
@@ -99,17 +99,17 @@ REM -----------------------------------------------------
 :FIND_GUCEF_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 
 SET GENERATORPATH=%GUCEF_HOME%\common\bin\MVC9\bin\Debug
-SET GENERATOREXE=CMakeListGenerator.exe
+SET GENERATOREXE=ProjectGenerator.exe
 SET EXETEST=%GENERATORPATH%\%GENERATOREXE%
 
 ECHO Test path = %EXETEST%
 IF EXIST %EXETEST% (
-  ECHO Warning: Using GUCEF CMake debug MVC9 development version of the CMakeListGenerator
+  ECHO Warning: Using GUCEF CMake debug MVC9 development version of the ProjectGenerator
   GOTO RUN_CMAKELISTGENERATOR
 )
 
 IF NOT EXIST %EXETEST% (
-  ECHO Cannot locate GUCEF CMake MVC9 debug development version of the CMakeListGenerator, trying GUCE
+  ECHO Cannot locate GUCEF CMake MVC9 debug development version of the ProjectGenerator, trying GUCE
   GOTO FIND_GUCE_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 )
 
@@ -121,17 +121,17 @@ REM -----------------------------------------------------
 :FIND_GUCE_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 
 SET GENERATORPATH=%GUCE_HOME%\common\bin\MVC9\bin\Debug
-SET GENERATOREXE=CMakeListGenerator.exe
+SET GENERATOREXE=ProjectGenerator.exe
 SET EXETEST=%GENERATORPATH%\%GENERATOREXE%
 
 ECHO Test path = %EXETEST%
 IF EXIST %EXETEST% (
-  ECHO Warning: Using GUCE CMake debug MVC9 development version of the CMakeListGenerator
+  ECHO Warning: Using GUCE CMake debug MVC9 development version of the ProjectGenerator
   GOTO RUN_CMAKELISTGENERATOR
 )
 
 IF NOT EXIST %EXETEST% (
-  ECHO Cannot locate GUCE CMake MVC9 debug development version of the CMakeListGenerator, trying release version
+  ECHO Cannot locate GUCE CMake MVC9 debug development version of the ProjectGenerator, trying release version
   GOTO FIND_GUCEF_RELEASE_CMAKELISTGENERATOR
 )
 
@@ -143,18 +143,18 @@ REM -----------------------------------------------------
 
 :FIND_GUCEF_RELEASE_CMAKELISTGENERATOR
 
-SET GENERATORPATH=%GUCEF_HOME%\tools\CMakeListGenerator\bin\ReleasedBins\Win32\11June2010
-SET GENERATOREXE=CMakeListGenerator.exe
+SET GENERATORPATH=%GUCEF_HOME%\tools\ProjectGenerator\bin\ReleasedBins\Win32\5April2011
+SET GENERATOREXE=ProjectGenerator.exe
 SET EXETEST="%GENERATORPATH%\%GENERATOREXE%"
 
 ECHO Test path = %EXETEST%
 IF EXIST %EXETEST% (
-  ECHO Using released version of CMakeListGenerator dated 11'th June 2010
+  ECHO Using released version of ProjectGenerator dated 5th April 2011
   GOTO RUN_CMAKELISTGENERATOR
 )
 
 IF NOT EXIST %EXETEST% (
-  ECHO Error: Unable to locate GUCEF's released CMakeListGenerator, trying GUCE release version
+  ECHO Error: Unable to locate GUCEF's released ProjectGenerator, trying GUCE release version
   GOTO FIND_GUCE_RELEASE_CMAKELISTGENERATOR
 )
     
@@ -166,13 +166,13 @@ REM -----------------------------------------------------
 
 :FIND_GUCE_RELEASE_CMAKELISTGENERATOR
 
-SET GENERATORPATH=%GUCE_THEBATCHDIR%\..\..\tools\CMakeListGenerator\bin\ReleasedBins\Win32\11June2010
-SET GENERATOREXE=CMakeListGenerator.exe
+SET GENERATORPATH=%GUCE_THEBATCHDIR%\..\..\tools\ProjectGenerator\bin\ReleasedBins\Win32\5April2011
+SET GENERATOREXE=ProjectGenerator.exe
 SET EXETEST=%GENERATORPATH%\%GENERATOREXE%
 
 ECHO Test path = %EXETEST%
 IF NOT EXIST %EXETEST% (
-  ECHO Error: Unable to locate GUCE's CMakeListGenerator, cannot locate any kind of generator
+  ECHO Error: Unable to locate GUCE's ProjectGenerator, cannot locate any kind of generator
   GOTO END
 )
 
@@ -197,7 +197,7 @@ IF NOT DEFINED GU_HOME (
   ECHO GU_HOME=%CD%
 )
 
-%GENERATOREXE% 'rootDir=%GUCEF_HOME%' 'rootDir=%GUCE_HOME%' 'rootDir=%GU_HOME%'
+%GENERATOREXE% *rootDir=%GUCEF_HOME%* *rootDir=%GUCE_HOME%* *rootDir=%GU_HOME%* *outputDir=%GU_HOME%* *cmakgen:TemplateDir=%GUCEF_HOME%\projects\CMake\ProjectGenTemplates* *generators=cmake* *dirsToIgnore=.svn;_svn* *projectName=GU*
 cd %GU_THEBATCHDIR%
 GOTO END
 
