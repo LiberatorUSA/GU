@@ -33,7 +33,7 @@ REM -----------------------------------------------------
 :FIND_GU_CMAKE_SLN_DEBUG_CMAKELISTGENERATOR
 
 SET GENERATORPATH=%GU_THEBATCHDIR%\..\..\common\bin\MVC9\bin\Debug
-SET GENERATOREXE=CMakeListGenerator.exe
+SET GENERATOREXE=ProjectGenerator.exe
 SET EXETEST="%GENERATORPATH%\%GENERATOREXE%"
 
 ECHO Test path = "%EXETEST%"

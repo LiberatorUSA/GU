@@ -61,8 +61,8 @@ extern "C" {
 
 /*---------------------------------------------------------------------------*/
 
-GU_CA_PLUGIN_POF_EXPORT_C void GUCEF_PLUGIN_CALLSPEC_PREFIX 
-GUCEFPlugin_Load( void ) GUCEF_PLUGIN_CALLSPEC_SUFFIX;
+GU_CA_PLUGIN_POF_EXPORT_C CORE::Int32 GUCEF_PLUGIN_CALLSPEC_PREFIX 
+GUCEFPlugin_Load( CORE::UInt32 argc, const char** argv ) GUCEF_PLUGIN_CALLSPEC_SUFFIX;
 
 /*--------------------------------------------------------------------------*/
 

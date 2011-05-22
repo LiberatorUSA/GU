@@ -60,15 +60,24 @@ typedef GUCEF::CORE::CTFactory< GUCE::CORE::CIMeshCodec, CPOFMeshCodec > TPOFMes
 
 /*-------------------------------------------------------------------------//
 //                                                                         //
+//      GLOBAL VARS                                                        //
+//                                                                         //
+//-------------------------------------------------------------------------*/
+
+static TPOFMeshCodecFactory pofMeshCodecFactory;
+
+/*-------------------------------------------------------------------------//
+//                                                                         //
 //      UTILITIES                                                          //
 //                                                                         //
 //-------------------------------------------------------------------------*/
 
-void GUCEF_PLUGIN_CALLSPEC_PREFIX 
-GUCEFPlugin_Load( void ) GUCEF_PLUGIN_CALLSPEC_SUFFIX
+CORE::Int32 GUCEF_PLUGIN_CALLSPEC_PREFIX 
+GUCEFPlugin_Load( CORE::UInt32 argc, const char** argv ) GUCEF_PLUGIN_CALLSPEC_SUFFIX
 {GUCEF_TRACE;
 
-    GUCE::CORE::CGUCEApplication::Instance()->GetMeshManager().RegisterMeshCodecFactory( "pof", *new TPOFMeshCodecFactory() );
+    GUCE::CORE::CGUCEApplication::Instance()->GetMeshManager().RegisterMeshCodecFactory( "pof", pofMeshCodecFactory  );
+    return 1;
 }
 
 /*--------------------------------------------------------------------------*/
