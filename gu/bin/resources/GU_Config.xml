@@ -188,7 +188,7 @@
 	<GUCE>
 		<CORE>
 			<CGUCEApplication>
-				<INPUTDRIVER module="$MODULEDIR$\inputdriverOIS" >
+				<INPUTDRIVER module="$MODULEDIR$\inputdriverMSWINMSG" >
 					<INPUTDRIVERPARAM key="HINSTANCE" value="$ENVVAR:HINSTANCE$" />
 					<INPUTDRIVERPARAM key="HWND" value="$ENVVAR:HWND$" />
 				</INPUTDRIVER>
@@ -199,6 +199,7 @@
 					<OgreRecourceGroups>
 						<OgreRecourceGroup name="Bootstrap" path="$MODULEDIR$\..\..\..\SampleData\Ogre\OgreCore.zip" type="Zip" />
 						<OgreRecourceGroup name="guceMyGUIOgre" path="MyGUI" type="gucefVFS" />
+                        <OgreRecourceGroup name="guceMyGUIOgreAppData" path="GU\GUI\MyGUIOgre" type="gucefVFS" />
 					</OgreRecourceGroups>
 				</OGRE>
 				<VideoSettings>
@@ -216,6 +217,7 @@
 			<CGUIManager Driver="MyGUIOgre" />
 			<guceMyGUIOgre>
 				<ResourceGroup Name="guceMyGUIOgre" />
+                <GuiSystemConfig Path="MyGUI\core.xml" />
 			</guceMyGUIOgre>
 		</GUI>
 	</GUCE>
