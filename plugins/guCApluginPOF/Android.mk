@@ -27,6 +27,17 @@ LOCAL_SRC_FILES := \
 
 LOCAL_C_INCLUDES := \
   $(MY_MODULE_PATH)/include \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/Ogre/OgreMain/include \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/Ogre/OgreMain/src \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/Ogre/OgreMain/src/nedmalloc \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/freetype/include \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/freetype/include/freetype \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/freetype/include/freetype/config \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/freetype/include/freetype/internal \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/freetype/include/freetype/internal/services \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/dependencies/freetype/src/winfonts \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/guceCORE/include \
+  $(MY_MODULE_PATH)/../../../../GUCE/trunk/guceGUI/include \
   $(MY_MODULE_PATH)/../../../../GUCEF/trunk/common/include \
   $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefCOM/include \
   $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefCOMCORE/include \
@@ -38,11 +49,15 @@ LOCAL_C_INCLUDES := \
   $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefMT/include \
   $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefPATCHER/include \
   $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefVFS/include \
+  $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefVFS/plugins/vfspluginZIP/dependencies/zziplib \
+  $(MY_MODULE_PATH)/../../../../GUCEF/trunk/gucefVFS/plugins/vfspluginZIP/dependencies/zziplib/zzip \
   $(MY_MODULE_PATH)/../../guCORE/include
 
 
 LOCAL_SHARED_LIBRARIES := \
   guCORE \
+  guceCORE \
+  guceGUI \
   gucefCORE \
   gucefMT \
   gucefGUI \
@@ -53,11 +68,6 @@ LOCAL_SHARED_LIBRARIES := \
   gucefDRN \
   gucefINPUT \
   gucefPATCHER
-
-
-LOCAL_LDLIBS := \
-  -lguceCORE \
-  -lguceGUI
 
 include $(BUILD_SHARED_LIBRARY)
 

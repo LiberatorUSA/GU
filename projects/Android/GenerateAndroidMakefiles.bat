@@ -67,11 +67,9 @@ REM -----------------------------------------------------
 
 SET PATH="%GENERATORPATH%";%PATH%
 
-cd %GU_THEBATCHDIR%\..\..\
-
 IF NOT DEFINED GUCE_HOME (
   ECHO WARNING: GUCE_HOME not defined, falling back to relative path
-  SET GUCE_HOME=%GU_THEBATCHDIR%\..\..\..\..\GUCE\trunk  
+  SET GUCE_HOME=%GU_THEBATCHDIR%\..\..\..\..\GUCE\trunk
 )
 
 IF NOT DEFINED GU_HOME (

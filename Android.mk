@@ -30,6 +30,9 @@ include $(MY_MODULE_PATH)/Android.mk
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefVFS/plugins/vfspluginZIP/dependencies/zziplib
 include $(MY_MODULE_PATH)/Android.mk
 
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverCEGUIOgre/dependency/CEGUI/dependencies/pcre
+include $(MY_MODULE_PATH)/Android.mk
+
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefCORE
 include $(MY_MODULE_PATH)/Android.mk
 
@@ -37,6 +40,15 @@ MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefMT
 include $(MY_MODULE_PATH)/Android.mk
 
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefMT_TestApp
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/freetype
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/RenderSystems/GLES2
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre/dependencies/MyGUI/MyGUIEngine
 include $(MY_MODULE_PATH)/Android.mk
 
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefCOMCORE
@@ -73,6 +85,9 @@ MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/tools/ProjectGene
 include $(MY_MODULE_PATH)/Android.mk
 
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/tools/ReferenceUpdater
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverCEGUIOgre/dependency/CEGUI
 include $(MY_MODULE_PATH)/Android.mk
 
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefCOM
@@ -138,6 +153,54 @@ include $(MY_MODULE_PATH)/Android.mk
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/tools/SVNMagicMerge
 include $(MY_MODULE_PATH)/Android.mk
 
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/OgreMain
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre/dependencies/MyGUI/Platforms/Ogre/OgrePlatform
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/Samples/Common
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/Samples/SkyBox
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/Tools/XMLConverter
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/RenderSystems/GLES
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/RenderSystems/GL
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/RenderSystems/Direct3D9
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/RenderSystems/Direct3D11
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/RenderSystems/Direct3D10
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/PlugIns/OctreeSceneManager
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/dependencies/Ogre/Samples/Browser
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre/dependencies/MyGUI/Common
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre/dependencies/MyGUI/Tools/LayoutEditor
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre/dependencies/MyGUI/Tools/ImageSetViewer
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre/dependencies/MyGUI/Tools/FontViewer
+include $(MY_MODULE_PATH)/Android.mk
+
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/gucefSMDRN
 include $(MY_MODULE_PATH)/Android.mk
 
@@ -145,6 +208,21 @@ MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/tools/GucefLogSer
 include $(MY_MODULE_PATH)/Android.mk
 
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCEF/trunk/tools/GucefLogServiceClientPlugin
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guceCORE
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guceGUI
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverMyGUIOgre
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/guidriverCEGUIOgre
+include $(MY_MODULE_PATH)/Android.mk
+
+MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../../../GUCE/trunk/samples/refapp
 include $(MY_MODULE_PATH)/Android.mk
 
 MY_MODULE_PATH := $(PROJECT_ROOT_PATH)/../../guCORE
