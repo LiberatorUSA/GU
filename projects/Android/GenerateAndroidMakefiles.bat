@@ -71,13 +71,16 @@ cd %GU_THEBATCHDIR%\..\..\
 
 IF NOT DEFINED GUCE_HOME (
   ECHO WARNING: GUCE_HOME not defined, falling back to relative path
-  SET GUCE_HOME=%GU_THEBATCHDIR%\..\..\..\GUCE\trunk
+  SET GUCE_HOME=%GU_THEBATCHDIR%\..\..\..\..\GUCE\trunk  
 )
 
 IF NOT DEFINED GU_HOME (
   ECHO WARNING: GU_HOME not defined, falling back to relative path
   SET GU_HOME=%GU_THEBATCHDIR%\..\..
 )
+
+ECHO GUCE_HOME = %GUCE_HOME%
+ECHO GU_HOME = %GU_HOME%
 
 %GENERATOREXE% *rootDir=%GUCEF_HOME%* *rootDir=%GUCE_HOME%* *rootDir=%GU_HOME%* *outputDir=%GU_HOME%* *generators=androidmake* *dirsToIgnore=.svn;_svn* *projectName=GU*
 cd "%GU_THEBATCHDIR%"
